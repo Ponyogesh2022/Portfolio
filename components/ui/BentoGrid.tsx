@@ -1,6 +1,15 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import { GlobeDemo } from "./GridGlobe";
+import { useState } from "react";
+import { animate } from "motion/react";
+import animationData from "../../data/confetti.json";
+import MagicButton from "./MagicButton";
+import { IoCopyOutline } from "react-icons/io5";
+import Lottie from "react-lottie";
+
 export const BentoGrid = ({
   className,
   children,
@@ -11,7 +20,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "mx-auto grid max-w-7xl grid-cols-1 gap-4 md:auto-rows-[18rem] md:grid-cols-3",
+        "mx-auto grid max-w-7xl grid-cols-1 gap-4 md:auto-rows-[18rem] md:grid-cols-5",
         className
       )}
     >
@@ -43,8 +52,12 @@ export const BentoGridItem = ({
   spareImg?: string;
   id: number;
 }) => {
-  console.log(id, "id");
-  const leftLists = ["React.JS" , "Tailwind" , "Next.JS" , "Typescript", "Figma",];
+  const [copied, setCopied] = useState(false);
+  const leftLists = ["React.JS", "Tailwind", "Next.JS", "Typescript", "Figma"];
+  function handleCopy(){
+    navigator.clipboard.writeText("ponyogesh342@gmail.com")
+    setCopied(true)
+  }
   return (
     <div
       className={cn(
@@ -82,8 +95,8 @@ export const BentoGridItem = ({
           )}
         </div>
         {id === 6 && (
-          <BackgroundGradientAnimation>
-            <div className="absolute z-50 flex justify-center items-center text-white font-bold "></div>
+          <BackgroundGradientAnimation interactive={true}>
+            
           </BackgroundGradientAnimation>
         )}
         <div
@@ -123,6 +136,25 @@ export const BentoGridItem = ({
                     {item}
                   </span>
                 ))}
+              </div>
+            </div>
+          )}
+          {id === 6 && (
+            <div className="mt-5 relative">
+              <div className={`absolute -bottom-5 right-0  `}>
+                <Lottie
+                  options={{
+                    loop: copied,
+                    autoplay: copied,
+                    animationData,
+                    rendererSettings: {
+                      preserveAspectRatio: "xMidYMid slice",
+                    },
+                  }}
+                />
+              </div>
+              <div >
+                <MagicButton title={copied ? 'Email Copied' : "Copy My Email"} position="left" icon={<IoCopyOutline/>} handleClick={handleCopy} otherClasses="`bg-[#161a31]"></MagicButton>
               </div>
             </div>
           )}
