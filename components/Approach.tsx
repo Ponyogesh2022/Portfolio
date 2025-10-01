@@ -15,7 +15,7 @@ export function Approach() {
         <Card
           title="Planning & Strategy"
           icon={<AceternityIcon order="Phase 1" />}
-          description="We'll work together to understand your needs and create a plan that aligns with your goals."
+          description="I collaborate with stakeholders to understand project requirements, define clear objectives, and create a roadmap for development"
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -25,7 +25,7 @@ export function Approach() {
         <Card
           title="Development & Progress Update"
           icon={<AceternityIcon order="Phase 2" />}
-          description="We'll work together to understand your needs and create a plan that aligns with your goals."
+          description="I write clean, maintainable code, implement features, and provide regular updates to ensure the project stays on track and meets expectations."
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -40,9 +40,9 @@ export function Approach() {
           <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" />
         </Card>
         <Card
-          title="Development & launch"
+          title="Testing & Launch"
           icon={<AceternityIcon order="Phase 3" />}
-          description="We'll work together to understand your needs and create a plan that aligns with your goals."
+          description="I thoroughly test applications, optimize performance, and ensure a smooth deployment. After launch, I monitor and iterate to maintain high-quality results"
         >
           <CanvasRevealEffect
             animationSpeed={3}

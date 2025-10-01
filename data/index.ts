@@ -8,7 +8,7 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
+    title: "Clear communication, better collaboration, stronger results",
     description: "",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "w-full h-full",
@@ -18,7 +18,7 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "I'm very flexible with time zone communications",
+    title: "Global collaboration, no limits",
     description: "",
     className: "md:col-span-2 md:row-span-1",
     imgClassName: "",
@@ -172,46 +172,54 @@ export const companies = [
 
 export const workExperience = [
   {
-    id: 1,
+    id: 4,
     title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    company: "Nippon Paint",
+    duration: "May 2021 – Aug 2021",
+    desc: "Completed a 4-month internship, learning React.js and Figma. Assisted in creating interactive UI components and gained hands-on experience in front-end design and development.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
-    id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
+    id: 5,
+    title: "Software Engineer",
+    company: "Nippon Paint",
+    duration: "Sep 2021 – Present",
+    desc: "Working as a Software Engineer, contributing to multiple projects. Developing web applications using React.js, improving UI/UX, collaborating with cross-functional teams, and handling end-to-end project responsibilities.",
+    className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
-  {
-    id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp3.svg",
-  },
-  {
-    id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
-    className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
-  },
+
+  // {
+  //   id: 3,
+  //   title: "Freelance App Dev Project",
+  //   desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
+  //   className: "md:col-span-2", // change to md:col-span-2
+  //   thumbnail: "/exp3.svg",
+  // },
+  // {
+  //   id: 4,
+  //   title: "Lead Frontend Developer",
+  //   desc: "Developed and maintained user-facing features using modern frontend technologies.",
+  //   className: "md:col-span-2",
+  //   thumbnail: "/exp4.svg",
+  // },
 ];
 
-export const socialMedia = [
-  {
-    id: 1,
-    img: "/git.svg",
-  },
-  {
-    id: 2,
-    img: "/twit.svg",
-  },
-  {
-    id: 3,
-    img: "/link.svg",
-  },
-];
+  export const socialMedia = [
+    {
+      id: 1,
+      img: "/git.svg",
+      link: "https://github.com/Ponyogesh2022",
+    },
+    {
+      id: 2,
+      img: "/twit.svg",
+      link: "#",
+    },
+    {
+      id: 3,
+      img: "/link.svg",
+      link: "https://www.linkedin.com/in/pon-yogesh/",
+    },
+  ];

@@ -53,7 +53,7 @@ export const BentoGridItem = ({
   id: number;
 }) => {
   const [copied, setCopied] = useState(false);
-  const leftLists = ["React.JS", "Tailwind", "Next.JS", "Typescript", "Figma"];
+  const leftLists = ["React.JS", "Tailwind", "Typescript", "Figma", "JavaScript","React Query","Zod"];
   function handleCopy(){
     navigator.clipboard.writeText("ponyogesh342@gmail.com")
     setCopied(true)
@@ -130,7 +130,7 @@ export const BentoGridItem = ({
 
                 {leftLists.map((item, idx) => (
                   <span
-                    className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132e]"
+                    className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132e] animate-scroll-up delay-500"
                     key={item}
                   >
                     {item}
