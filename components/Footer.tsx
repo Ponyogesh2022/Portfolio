@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="w-full pt-20 pb-10" id="contact">
       <div className="flex flex-col items-center justify-center">
-        <h1 className="text-4xl lg:w-[45vw] ml-36">
+        <h1 className="text-4xl lg:w-[45vw] md:ml-36 text-center md:text-start">
           Ready to take <span className="text-purple">your {""}</span>digital
           presence to the next level{" "}
         </h1>
@@ -22,7 +22,7 @@ const Footer = () => {
           />
         </a>
       </div>
-      <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
+      <div className="flex mt-16 md:flex-row flex-col justify-between items-center space-y-5">
         <p className="md:text-base text-sm md:font-normal font-light">
           Copyright © 2025 Ponyogesh
         </p>

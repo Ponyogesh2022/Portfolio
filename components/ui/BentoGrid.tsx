@@ -53,10 +53,18 @@ export const BentoGridItem = ({
   id: number;
 }) => {
   const [copied, setCopied] = useState(false);
-  const leftLists = ["React.JS", "Tailwind", "Typescript", "Figma", "JavaScript","React Query","Zod"];
-  function handleCopy(){
-    navigator.clipboard.writeText("ponyogesh342@gmail.com")
-    setCopied(true)
+  const leftLists = [
+    "React.JS",
+    "Tailwind",
+    "Typescript",
+    "Figma",
+    "JavaScript",
+    "React Query",
+    "Zod",
+  ];
+  function handleCopy() {
+    navigator.clipboard.writeText("ponyogesh342@gmail.com");
+    setCopied(true);
   }
   return (
     <div
@@ -95,9 +103,9 @@ export const BentoGridItem = ({
           )}
         </div>
         {id === 6 && (
-          <BackgroundGradientAnimation interactive={true}>
-            
-          </BackgroundGradientAnimation>
+          <BackgroundGradientAnimation
+            interactive={true}
+          ></BackgroundGradientAnimation>
         )}
         <div
           className={cn(
@@ -113,24 +121,36 @@ export const BentoGridItem = ({
           </div>
           {id === 2 && <GlobeDemo />}
           {id === 3 && (
-            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-              <div className="flex flex-col gap-3 lg:gap-8">
-                {leftLists.map((item, idx) => (
-                  <span
-                    className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132e]"
-                    key={item}
-                  >
-                    {item}
-                  </span>
-                ))}
-                <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
+            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2 top-0 pb-20">
+              <div className="">
+                <div className="flex flex-col gap-3 lg:gap-8 animate-scroll-up">
+                  {/* First copy */}
+                  {leftLists.map((item, idx) => (
+                    <span
+                      className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-70 lg:opacity-100 rounded-lg text-center bg-[#10132e]"
+                      key={`first-${item}`}
+                    >
+                      {item}
+                    </span>
+                  ))}
+                  {/* Duplicate copy for seamless loop */}
+                  {leftLists.map((item, idx) => (
+                    <span
+                      className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-70 lg:opacity-100 rounded-lg text-center bg-[#10132e]"
+                      key={`second-${item}`}
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
+
               <div className="flex flex-col gap-3 lg:gap-8">
                 <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
 
                 {leftLists.map((item, idx) => (
                   <span
-                    className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132e] animate-scroll-up delay-500"
+                    className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132e] "
                     key={item}
                   >
                     {item}
@@ -153,8 +173,14 @@ export const BentoGridItem = ({
                   }}
                 />
               </div>
-              <div >
-                <MagicButton title={copied ? 'Email Copied' : "Copy My Email"} position="left" icon={<IoCopyOutline/>} handleClick={handleCopy} otherClasses="`bg-[#161a31]"></MagicButton>
+              <div>
+                <MagicButton
+                  title={copied ? "Email Copied" : "Copy My Email"}
+                  position="left"
+                  icon={<IoCopyOutline />}
+                  handleClick={handleCopy}
+                  otherClasses="`bg-[#161a31]"
+                ></MagicButton>
               </div>
             </div>
           )}
